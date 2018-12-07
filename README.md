@@ -1,5 +1,5 @@
 # EBanking
-Back + 3client consommation || Spring boot, Angular 6 , Java FX , JSF  , REST SOAP JSM , MAVEN , SCRUM , Hibernate , MYSQL
+Back + 3client consommation || Spring boot 2.1.1 , Angular 6.2.4 , Java FX , JSF  , REST SOAP JSM , MAVEN 3.5.0 , SCRUM , Hibernate , MYSQL
 <br/>
 ![logo](https://www.tpbbank.co.tz/images/internet_banking.png)
 # This Document will contain project planification specifications
