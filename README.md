@@ -2,7 +2,7 @@
 Back + 3client consommation || Spring boot 2.1.1 , Angular 6.2.4 , Java FX , JSF  , REST SOAP JSM , MAVEN 3.5.0 , SCRUM , Hibernate , MYSQL
 <br/>
 ![logo](https://www.tpbbank.co.tz/images/internet_banking.png)
-# This Document will contain project planification specifications
+<h1> This Document will contain project planification & specifications<h1>
  
 
 <h1>Product Backlog</h1> 
@@ -89,9 +89,7 @@ Back + 3client consommation || Spring boot 2.1.1 , Angular 6.2.4 , Java FX , JSF
 <h3>voir l'ensemble des fichiers : </h3>
 <ul>
   <li>details_sprint0.md</li>
-  <li>details_sprint1.md</li>
-  <li>details_sprint2.md</li>
-  <li>details_sprint3.md</li>
+  <li>en cours de conception...</li> 
 </ul>            
 <h1>Conception de lq bqse de données</h1> 
 <h3>voir le fichier 'UML.png' </h3>
