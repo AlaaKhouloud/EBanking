@@ -15,16 +15,16 @@ public @Data class Agence implements Serializable{
 	@Id @GeneratedValue
 	private Long id_agence;
 	private String nom;
+	private String banque;
 	private String pays;
 	private String ville;
 	private String adresse;
 	private Date date_creation;
 	private Compte creator;
 	
-	public Agence(Long id_agence, String nom, String pays, String ville, String adresse, Date date_creation,
+	public Agence(String nom, String pays, String ville, String adresse, Date date_creation,
 			Compte creator) {
-		super();
-		this.id_agence = id_agence;
+		super(); 
 		this.nom = nom;
 		this.pays = pays;
 		this.ville = ville;

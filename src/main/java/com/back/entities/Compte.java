@@ -2,61 +2,59 @@ package com.back.entities;
 
 import java.io.Serializable;
 import java.util.Date;
-
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.hibernate.annotations.CascadeType;
+
 import lombok.Data;
 
-@Entity
-@Table(name = "Compte",  uniqueConstraints = @UniqueConstraint(columnNames = {"email" , "CIN"}))
+@Entity 
 public @Data class Compte implements Serializable{
 
 	@Id @GeneratedValue
 	private Long id_compte;
-	private String CIN;
-	private String email;
-	private String password;
-	private String nom;
-	private String prenom;
-	private String pays;
-	private String ville;
-	private String adresse;
-	private String telephone;
-	private Date date_naissance;
-	private Date date_adhesion;
+	private User utilisateur; 
+	private Date date_ouverture;
+	private Date date_creation_compte;
 	private String RIB;
 	private Etat_compte etat;
 	private Agence agence;
-	
-	
-	public Compte(Long id_compte, String cIN, String password, String nom, String prenom, String pays, String ville,
-			String adresse, String telephone, Date date_naissance, Date date_adhesion, String rIB, Etat_compte etat,
-			Agence agence) {
-		super();
-		this.id_compte = id_compte;
-		CIN = cIN;
-		this.password = password;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.pays = pays;
-		this.ville = ville;
-		this.adresse = adresse;
-		this.telephone = telephone;
-		this.date_naissance = date_naissance;
-		this.date_adhesion = date_adhesion;
-		RIB = rIB;
-		this.etat = etat;
-		this.agence = agence;
-	}
-
-
+	@OneToMany(mappedBy="sender"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
+    private List<Recharge> recharges;
+	@OneToMany(mappedBy="from_RIB"  , fetch = FetchType.LAZY, cascade = javax.persistence.CascadeType.ALL)
+    private List<Virement> virements;
+	 
+    
 	public Compte() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
+
+	public Compte(User utilisateur, Date date_ouverture, Date date_creation_compte, String rIB,
+			Etat_compte etat, Agence agence, List<Recharge> recharges, List<Virement> virements) {
+		super(); 
+		this.utilisateur = utilisateur;
+		this.date_ouverture = date_ouverture;
+		this.date_creation_compte = date_creation_compte;
+		RIB = rIB;
+		this.etat = etat;
+		this.agence = agence;
+		this.recharges = recharges;
+		this.virements = virements;
+	}
+
+    
 }

@@ -1,0 +1,15 @@
+package com.back.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.back.dao.CompteRepository;
+
+@RestController
+public class CompteRestService {
+
+	@Autowired
+	private CompteRepository compteRepository;
+	
+	
+}

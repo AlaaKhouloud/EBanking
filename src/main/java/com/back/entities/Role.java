@@ -13,12 +13,11 @@ public @Data class Role implements Serializable{
 
 	@Id @GeneratedValue
 	private Long id_role;
-	private String role;
+	private Role_values role;
 	private String description;
 	
-	public Role(Long id_role, String role, String description) {
-		super();
-		this.id_role = id_role;
+	public Role(Role_values role, String description) {
+		super(); 
 		this.role = role;
 		this.description = description;
 	}
@@ -27,6 +26,5 @@ public @Data class Role implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
+ 
 }
