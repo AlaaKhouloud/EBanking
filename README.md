@@ -91,5 +91,3 @@ Back + 3client consommation || Spring boot 2.1.1 , Angular 6.2.4 , Java FX , JSF
   <li>details_sprint0.md</li>
   <li>en cours de conception...</li> 
 </ul>            
-<h1>Conception de lq bqse de données</h1> 
-<h3>voir le fichier 'x.png' </h3>
