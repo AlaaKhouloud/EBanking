@@ -49,6 +49,7 @@ Back + 3client consommation || Spring boot 2.1.1 , Angular 6.2.4 , Java FX , JSF
         <ul>
           <li>Ajout</li>
           <li>Modification</li>
+          <li>Recherche</li> 
           <li>Résiliation</li>
           <li>Suspendre</li>
           <li>lever la suspendu</li>
@@ -60,24 +61,59 @@ Back + 3client consommation || Spring boot 2.1.1 , Angular 6.2.4 , Java FX , JSF
   </tr>
   <tr>
     <td>7</td>
-    <td>En tant qu'administrateur je souhaite avoir la possibilité de créer une nouvelle agence</td> 
+    <td>En tant qu'agent je souhaite gérer les virements et recharges:
+        <ul>
+          <li>Vérifier les transactions (valider, ne pas valider)</li>
+          <li>Recevoir des notifications de demande de virements ou de recharges</li> 
+        </ul>
+    </td> 
     <td></td> 
     <td></td>
   </tr>
   <tr>
     <td>8</td>
-    <td>En tant qu'administrateur je souhaite gérer les agents</td> 
+    <td>En tant qu'administrateur je souhaite me connecter en toute sécurité</td> 
     <td></td> 
     <td></td>
   </tr>
   <tr>
     <td>9</td>
-    <td>En tant qu'administrateur je souhaite controler les précisions de soldes</td> 
+    <td>En tant qu'administrateur je souhaite avoir la possibilité de créer une nouvelle agence</td> 
     <td></td> 
     <td></td>
   </tr>
   <tr>
     <td>10</td>
+    <td>
+     En tant qu'administrateur je souhaite gérer les agents : 
+      <ul>
+          <li>Ajout</li>
+          <li>Modification</li>
+          <li>Bloque</li>
+          <li>Activation</li>
+          <li>Désactivation</li>
+          <li>Lister</li> 
+          <li>Rechercher</li> 
+          <li>Afficher l'historique de leurs travails</li> 
+        </ul>
+    </td> 
+    <td></td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>En tant qu'administrateur je souhaite controler les précisions de soldes</td> 
+    <td></td> 
+    <td></td>
+  </tr>
+ <tr>
+    <td>12</td>
+    <td>En tant qu'administrateur je souhaite visionner et controler les clients</td> 
+    <td></td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td>13</td>
     <td>En tant qu'administrateur je souhaite controler les libelle des clients ainsi que leurs contrats</td> 
     <td></td> 
     <td></td>
