@@ -2,9 +2,7 @@ package com.back.entities;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*; 
 
 import lombok.Data;
 
@@ -13,18 +11,17 @@ public @Data class Role implements Serializable{
 
 	@Id @GeneratedValue
 	private Long id_role;
+	@Enumerated(EnumType.STRING)
 	private Role_values role;
 	private String description;
+	/*@ManyToOne
+	@JoinColumn(name = "id_user")
+	private User user_role;*/
 	
-	public Role(Role_values role, String description) {
-		super(); 
-		this.role = role;
-		this.description = description;
-	}
-
 	public Role() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
  
 }

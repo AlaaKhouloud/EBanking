@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -20,7 +22,8 @@ public @Data class Recharge implements Serializable{
 	@JoinColumn(name = "id_compte")
 	private Compte sender;
 	private String Totelephone;
-	private Date date_recharge;
+	private Date date_recharge; 
+	@Enumerated(EnumType.STRING)
 	private Montant_rehcarge montant;
 	
 	
