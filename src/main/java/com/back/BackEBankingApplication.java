@@ -8,5 +8,7 @@ public class BackEBankingApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackEBankingApplication.class, args);
+		
+		
 	}
 }

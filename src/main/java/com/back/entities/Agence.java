@@ -22,6 +22,7 @@ public @Data class Agence implements Serializable{
 	private Date date_creation;
 	private Compte creator;
 	
+	
 	public Agence(String nom, String pays, String ville, String adresse, Date date_creation,
 			Compte creator) {
 		super(); 

@@ -27,6 +27,8 @@ import com.back.entities.Telephone;
 import com.back.entities.User;
 import com.back.service.UserRestService;
 
+import lombok.Data;
+
 @RunWith(SpringRunner.class)
 public class BackEBankingApplicationTests {
 
@@ -47,6 +49,7 @@ public class BackEBankingApplicationTests {
 	
 	 
 	 @org.junit.Before
+	 
 	 public void setUp() {
 	     User user1 = new User("XXX", "XX@gmail.com","","khouloud","","","",null ,null , null , null , null);
 	  
