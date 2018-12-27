@@ -51,9 +51,14 @@ public class BackEBankingApplicationTests {
 	 
 	 @org.junit.Before
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 
 	 public void setUp() {
 	     User user1 = new User("XXX", "XX@gmail.com","","khouloud","","","",null ,null , null , null , null);
+=======
+	 public void setUp() {  
+	     User user1 = new User("XXX", "XX@gmail.com",false,Role_values.ROLE_CLIENT);
+>>>>>>> refs/remotes/origin/khouloud
 =======
 	 public void setUp() {  
 	     User user1 = new User("XXX", "XX@gmail.com",false,Role_values.ROLE_CLIENT);

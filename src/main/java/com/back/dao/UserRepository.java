@@ -8,9 +8,14 @@ import org.springframework.stereotype.Repository;
 import com.back.entities.User;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public interface UserRepository  extends JpaRepository<User, Long>{
 	
 	
+=======
+@Repository
+public interface UserRepository  extends JpaRepository<User, Long>{
+>>>>>>> refs/remotes/origin/khouloud
 =======
 @Repository
 public interface UserRepository  extends JpaRepository<User, Long>{

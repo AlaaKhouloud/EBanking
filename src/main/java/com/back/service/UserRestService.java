@@ -1,6 +1,7 @@
 package com.back.service;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.List;
 import java.util.Optional;
 
@@ -14,20 +15,35 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+=======
+import java.security.Principal;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+>>>>>>> refs/remotes/origin/khouloud
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/khouloud
+=======
 >>>>>>> refs/remotes/origin/khouloud
 import org.springframework.web.bind.annotation.RestController;
 import com.back.dao.UserRepository;
 import com.back.domain.Response;
 import com.back.entities.User;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.back.metier.UserMetier;
 
+=======
+import com.back.util.PasswordUtil;
+ 
+>>>>>>> refs/remotes/origin/khouloud
 =======
 import com.back.util.PasswordUtil;
  
@@ -71,6 +87,7 @@ public class UserRestService {
     }
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@Autowired
 	private UserMetier userMetier;
 
@@ -96,6 +113,8 @@ public class UserRestService {
 	}
 	
 =======
+=======
+>>>>>>> refs/remotes/origin/khouloud
 	 
 	@GetMapping("/api/test/user")
 	@PreAuthorize("hasRole('USER')") //or hasRole('ADMIN')
@@ -114,6 +133,9 @@ public class UserRestService {
 	public String adminAccess() {
 		return ">>> Admin contents !";
 	}
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/khouloud
+=======
 >>>>>>> refs/remotes/origin/khouloud
 	
 }
