@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.Map;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -23,6 +25,7 @@ public @Data class Virement implements Serializable{
 	private String to_RIB;
 	private Date date_virement;
 	private Double montant;
+	@Enumerated(EnumType.STRING)
 	private Etat_virement etat_virement;
 	
  

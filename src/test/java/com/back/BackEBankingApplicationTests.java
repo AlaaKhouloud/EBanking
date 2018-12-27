@@ -3,6 +3,7 @@ package com.back;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -49,9 +50,14 @@ public class BackEBankingApplicationTests {
 	
 	 
 	 @org.junit.Before
+<<<<<<< HEAD
 	 
 	 public void setUp() {
 	     User user1 = new User("XXX", "XX@gmail.com","","khouloud","","","",null ,null , null , null , null);
+=======
+	 public void setUp() {  
+	     User user1 = new User("XXX", "XX@gmail.com",false,Role_values.ROLE_CLIENT);
+>>>>>>> refs/remotes/origin/khouloud
 	  
 	     Mockito.when(userRepository.findByName(user1.getNom())).thenReturn(user1);
 	 }

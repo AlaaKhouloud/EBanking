@@ -25,8 +25,9 @@ public @Data class Compte implements Serializable{
 
 	@Id @GeneratedValue
 	private Long id_compte;
-	private User utilisateur; 
-	private Date date_ouverture;
+	@ManyToOne
+	@JoinColumn(name = "id_user")
+	private User user_cpt; 
 	private Date date_creation_compte;
 	private String RIB;
 	private Etat_compte etat;
@@ -43,11 +44,10 @@ public @Data class Compte implements Serializable{
 	}
 
 
-	public Compte(User utilisateur, Date date_ouverture, Date date_creation_compte, String rIB,
+	public Compte(User utilisateur, Date date_creation_compte, String rIB,
 			Etat_compte etat, Agence agence, List<Recharge> recharges, List<Virement> virements) {
 		super(); 
-		this.utilisateur = utilisateur;
-		this.date_ouverture = date_ouverture;
+		this.user_cpt = utilisateur; 
 		this.date_creation_compte = date_creation_compte;
 		RIB = rIB;
 		this.etat = etat;

@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -26,13 +28,20 @@ public @Data class User implements Serializable{
 	private String prenom;
 	private String pays;
 	private String ville;
+	private boolean enabled;
 	@OneToMany(mappedBy="adrs"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
     private List<Adresse> adresses;
 	@OneToMany(mappedBy="tels"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
     private List<Telephone> telephones;
 	private Date date_naissance;
+	private Date date_ouverture;
 	private Date date_adhesion;  
-	private Role role;
+	//@OneToMany(mappedBy="user_role"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
+	//private Role role;
+	@Enumerated(EnumType.STRING)
+	private Role_values role;
+	@OneToMany(mappedBy="user_cpt"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
+	private List<Compte> comptes;
 	
 
 	public User() {
@@ -40,23 +49,30 @@ public @Data class User implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String cIN, String email, String password, String nom, String prenom, String pays,
-			String ville, List<Adresse> adresses, List<Telephone> telephones, Date date_naissance, Date date_adhesion,
-			Role role) {
-		super(); 
-		CIN = cIN;
+
+	public User(Long id_user, String email, String password, boolean enabled, Role_values role) {
+		super();
+		this.id_user = id_user;
 		this.email = email;
 		this.password = password;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.pays = pays;
-		this.ville = ville;
-		this.adresses = adresses;
-		this.telephones = telephones;
-		this.date_naissance = date_naissance;
-		this.date_adhesion = date_adhesion;
+		this.enabled = enabled;
+		this.role = role;
+	}
+
+
+	public User( String email, String password, boolean enabled, Role_values role) {
+		super(); 
+		this.email = email;
+		this.password = password;
+		this.enabled = enabled;
 		this.role = role;
 	}
 	
-	
+	public User( String email, String password) {
+		super(); 
+		this.email = email;
+		this.password = password; 
+	}
+
+ 
 }
