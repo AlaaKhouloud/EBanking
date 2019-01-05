@@ -44,12 +44,12 @@ public class RechargeRestService {
 	
 	@PutMapping(value="/addRecharge")
 	@PreAuthorize("hasRole('ROLE_CLIENT')")
-	public ResponseEntity<Recharge> addVirement(@RequestParam("email")String pseudo , @RequestParam("to")String tel , @RequestParam("montant")String montant){ 
+	public ResponseEntity<Recharge> addVirement(@RequestParam("email")String pseudo , @RequestParam("from")String ribfrom, @RequestParam("to")String tel , @RequestParam("montant")String montant){ 
 		List<Compte> compteIN = compteRepository.findAll(); 
 		Recharge recharge = null;
 		Compte lecompte = null;
 		for(Compte c : compteIN) {
-			if(c.getUser_cpt().getEmail().equals(pseudo)) {
+			if(c.getUser_cpt().getEmail().equals(pseudo)  && c.getRIB().equals(ribfrom)) {
 				lecompte = c;
 			}
 		}
