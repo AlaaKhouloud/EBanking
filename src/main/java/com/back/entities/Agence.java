@@ -5,25 +5,31 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 
 @Entity
 public @Data class Agence implements Serializable{
 
-	@Id @GeneratedValue
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id_agence;
 	private String nom;
 	private String banque;
 	private String pays;
 	private String ville;
 	private String adresse;
+	@JsonFormat(pattern="yyyy-MM-dd")  
 	private Date date_creation;
 	@JoinColumn(name = "id_compte")
 	@OneToOne(cascade = javax.persistence.CascadeType.ALL)
+	@JsonIgnore
 	private Compte creator;
 	
 	public Agence(String nom, String pays, String ville, String adresse, Date date_creation,

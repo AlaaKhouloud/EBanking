@@ -8,11 +8,14 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn; 
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne; 
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.ColumnDefault;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -22,7 +25,7 @@ import lombok.Data;
 @Entity 
 public @Data class Compte implements Serializable{
 
-	@Id @GeneratedValue 
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id_compte;
 	@ManyToOne
 	@JoinColumn(name = "id_user") 
@@ -31,6 +34,10 @@ public @Data class Compte implements Serializable{
 	@JsonFormat(pattern="yyyy-MM-dd")  
 	private Date date_creation_compte;  
 	private String RIB;
+	@ColumnDefault("0")
+	private Double money;
+	@ColumnDefault("0")
+	private Double money_for_transactions;
 	@JsonFormat(shape = JsonFormat.Shape.STRING)  
 	@Enumerated(EnumType.STRING)
 	private Etat_compte etat;
@@ -51,12 +58,14 @@ public @Data class Compte implements Serializable{
 	}
 
 
-	public Compte(User utilisateur, Date date_creation_compte, String rIB,
+	public Compte(User user_cpt, Date date_creation_compte, String rIB, Double money, Double money_for_transactions,
 			Etat_compte etat, Agence agence, List<Recharge> recharges, List<Virement> virements) {
-		super(); 
-		this.user_cpt = utilisateur; 
+		super();
+		this.user_cpt = user_cpt;
 		this.date_creation_compte = date_creation_compte;
 		RIB = rIB;
+		this.money = money;
+		this.money_for_transactions = money_for_transactions;
 		this.etat = etat;
 		this.agence = agence;
 		this.recharges = recharges;
