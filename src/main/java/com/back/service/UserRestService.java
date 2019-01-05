@@ -29,12 +29,12 @@ public class UserRestService {
 	private UserRepository userRepository;
 	 
 	 
-	@GetMapping(value="/users")
+	/*@GetMapping(value="/users")
 	@PreAuthorize("hasRole('AGENT') or hasRole('ADMIN')")
 	public ResponseEntity<List<User>> getAllUsers(){
 		List<User> users = userRepository.findAll();
 	    return new ResponseEntity<List<User>>(users , HttpStatus.OK);
-	}
+	}*/
 	
 	
 }
