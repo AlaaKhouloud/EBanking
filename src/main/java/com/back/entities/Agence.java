@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
@@ -20,6 +22,8 @@ public @Data class Agence implements Serializable{
 	private String ville;
 	private String adresse;
 	private Date date_creation;
+	@JoinColumn(name = "id_compte")
+	@OneToOne(cascade = javax.persistence.CascadeType.ALL)
 	private Compte creator;
 	
 	public Agence(String nom, String pays, String ville, String adresse, Date date_creation,

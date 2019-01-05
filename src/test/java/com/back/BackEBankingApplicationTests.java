@@ -51,7 +51,7 @@ public class BackEBankingApplicationTests {
 	 public void setUp() {  
 	     User user1 = new User("XXX", "XX@gmail.com",false,Role_values.ROLE_CLIENT);
 	  
-	     Mockito.when(userRepository.findByEmail(user1.getEmail())).thenReturn(user1);
+	     Mockito.when(userRepository.findByUsername(user1.getEmail())).thenReturn(user1);
 	 }
 	 
 	 @Test

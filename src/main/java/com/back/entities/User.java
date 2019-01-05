@@ -14,33 +14,41 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"email" , "CIN"}))
 public @Data class User implements Serializable{
 
 	@Id @GeneratedValue
-	private Long id_user;
-	private String CIN;
-	private String email;
-	private String password;
-	private String nom;
-	private String prenom;
-	private String pays;
-	private String ville;
+	private Long id_user; 
+	private String CIN; 
+	private String email; 
+	private String password; 
+	private String nom;	 
+	private String prenom; 
+	private String pays; 
+	private String ville; 
 	private boolean enabled;
 	@OneToMany(mappedBy="adrs"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
     private List<Adresse> adresses;
 	@OneToMany(mappedBy="tels"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
-    private List<Telephone> telephones;
-	private Date date_naissance;
-	private Date date_ouverture;
+    private List<Telephone> telephones; 
+	@JsonFormat(pattern="yyyy-MM-dd") 
+	private Date date_naissance; 
+	@JsonFormat(pattern="yyyy-MM-dd") 
+	private Date date_ouverture; 
+	@JsonFormat(pattern="yyyy-MM-dd") 
 	private Date date_adhesion;  
 	//@OneToMany(mappedBy="user_role"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
 	//private Role role;
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.STRING) 
+	@JsonFormat(shape = JsonFormat.Shape.STRING) 
 	private Role_values role;
 	@OneToMany(mappedBy="user_cpt"  , fetch = FetchType.LAZY , cascade = javax.persistence.CascadeType.ALL)
+	@JsonIgnore
 	private List<Compte> comptes;
 	
 

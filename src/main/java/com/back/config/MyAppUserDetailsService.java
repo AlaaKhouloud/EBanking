@@ -20,7 +20,7 @@ public class MyAppUserDetailsService  implements UserDetailsService{
 	private   UserRepository userrep;
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		com.back.entities.User activeUserInfo = (com.back.entities.User) userrep.findByEmail(username);
+		com.back.entities.User activeUserInfo = (com.back.entities.User) userrep.findByUsername(username);
 		GrantedAuthority authority = new SimpleGrantedAuthority(activeUserInfo.getRole().toString());
 		UserDetails userDetails = (UserDetails)new User(activeUserInfo.getEmail(),
 				activeUserInfo.getPassword(), Arrays.asList(authority));

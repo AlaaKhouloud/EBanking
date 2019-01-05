@@ -36,23 +36,5 @@ public class UserRestService {
 	    return new ResponseEntity<List<User>>(users , HttpStatus.OK);
 	}
 	
-
-	@GetMapping("/api/test/user")
-	@PreAuthorize("hasRole('USER')") //or hasRole('ADMIN')
-	public String userAccess() {
-		return ">>> User contents !";
-	}
-	
-	@GetMapping("/api/test/agent or hasRole('ADMIN')")
-	@PreAuthorize("hasRole('AGENT') or hasRole('ADMIN')")
-	public String agentAccess() {
-		return ">>> Agent contents !";
-	}
-	
-	@GetMapping("/api/test/admin")
-	@PreAuthorize("hasRole('ADMIN')")
-	public String adminAccess() {
-		return ">>> Admin contents !";
-	}
 	
 }

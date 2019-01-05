@@ -38,12 +38,10 @@ public class AuthenticationController {
 	@PostMapping(value="/login")
 	public ResponseEntity<User> getUsers(@RequestParam("email")String pseudo,
 			@RequestParam("password")String mot_de_passe){
-		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		User compte= this.userRepository.findByEmail(pseudo);
+		User compte= this.userRepository.findByEmail(pseudo,mot_de_passe);
 		
-		if(passwordEncoder.matches(mot_de_passe, compte.getPassword())) {
-			return new ResponseEntity<User>(compte,HttpStatus.OK);}
-		return new ResponseEntity<User>(compte,HttpStatus.NOT_FOUND);
+		if(compte != null) return new ResponseEntity<User>(compte,HttpStatus.OK);
+		else return new ResponseEntity<User>(compte,HttpStatus.NOT_FOUND);
 	}
 	
 	 
