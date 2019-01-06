@@ -72,5 +72,105 @@ public @Data class Compte implements Serializable{
 		this.virements = virements;
 	}
 
+
+	public Long getId_compte() {
+		return id_compte;
+	}
+
+
+	public void setId_compte(Long id_compte) {
+		this.id_compte = id_compte;
+	}
+
+
+	public User getUser_cpt() {
+		return user_cpt;
+	}
+
+
+	public void setUser_cpt(User user_cpt) {
+		this.user_cpt = user_cpt;
+	}
+
+
+	public Date getDate_creation_compte() {
+		return date_creation_compte;
+	}
+
+
+	public void setDate_creation_compte(Date date_creation_compte) {
+		this.date_creation_compte = date_creation_compte;
+	}
+
+
+	public String getRIB() {
+		return RIB;
+	}
+
+
+	public void setRIB(String rIB) {
+		RIB = rIB;
+	}
+
+
+	public Double getMoney() {
+		return money;
+	}
+
+
+	public void setMoney(Double money) {
+		this.money = money;
+	}
+
+
+	public Double getMoney_for_transactions() {
+		return money_for_transactions;
+	}
+
+
+	public void setMoney_for_transactions(Double money_for_transactions) {
+		this.money_for_transactions = money_for_transactions;
+	}
+
+
+	public Etat_compte getEtat() {
+		return etat;
+	}
+
+
+	public void setEtat(Etat_compte etat) {
+		this.etat = etat;
+	}
+
+
+	public Agence getAgence() {
+		return agence;
+	}
+
+
+	public void setAgence(Agence agence) {
+		this.agence = agence;
+	}
+
+
+	public List<Recharge> getRecharges() {
+		return recharges;
+	}
+
+
+	public void setRecharges(List<Recharge> recharges) {
+		this.recharges = recharges;
+	}
+
+
+	public List<Virement> getVirements() {
+		return virements;
+	}
+
+
+	public void setVirements(List<Virement> virements) {
+		this.virements = virements;
+	}
+
     
 }

@@ -91,6 +91,166 @@ public @Data class User implements Serializable{
 		this.nom = nom;
 		this.prenom = prenom;
 	}
+
+
+	public Long getId_user() {
+		return id_user;
+	}
+
+
+	public void setId_user(Long id_user) {
+		this.id_user = id_user;
+	}
+
+
+	public String getCIN() {
+		return CIN;
+	}
+
+
+	public void setCIN(String cIN) {
+		CIN = cIN;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public String getNom() {
+		return nom;
+	}
+
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+
+	public String getPays() {
+		return pays;
+	}
+
+
+	public void setPays(String pays) {
+		this.pays = pays;
+	}
+
+
+	public String getVille() {
+		return ville;
+	}
+
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+
+	public List<Adresse> getAdresses() {
+		return adresses;
+	}
+
+
+	public void setAdresses(List<Adresse> adresses) {
+		this.adresses = adresses;
+	}
+
+
+	public List<Telephone> getTelephones() {
+		return telephones;
+	}
+
+
+	public void setTelephones(List<Telephone> telephones) {
+		this.telephones = telephones;
+	}
+
+
+	public Date getDate_naissance() {
+		return date_naissance;
+	}
+
+
+	public void setDate_naissance(Date date_naissance) {
+		this.date_naissance = date_naissance;
+	}
+
+
+	public Date getDate_ouverture() {
+		return date_ouverture;
+	}
+
+
+	public void setDate_ouverture(Date date_ouverture) {
+		this.date_ouverture = date_ouverture;
+	}
+
+
+	public Date getDate_adhesion() {
+		return date_adhesion;
+	}
+
+
+	public void setDate_adhesion(Date date_adhesion) {
+		this.date_adhesion = date_adhesion;
+	}
+
+
+	public Role_values getRole() {
+		return role;
+	}
+
+
+	public void setRole(Role_values role) {
+		this.role = role;
+	}
+
+
+	public List<Compte> getComptes() {
+		return comptes;
+	}
+
+
+	public void setComptes(List<Compte> comptes) {
+		this.comptes = comptes;
+	}
 	
 	
 
