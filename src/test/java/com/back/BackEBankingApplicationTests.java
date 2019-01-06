@@ -28,7 +28,9 @@ import com.back.entities.Telephone;
 import com.back.entities.User;
 import com.back.service.UserRestService;
 
+
 import lombok.Data;
+
 
 @RunWith(SpringRunner.class)
 public class BackEBankingApplicationTests {
@@ -51,6 +53,7 @@ public class BackEBankingApplicationTests {
 	 
 	 @org.junit.Before
 
+
 	 
 	// public void setUp() {
 	   //  User user1 = new User("XXX", "XX@gmail.com","","khouloud","","","",null ,null , null , null , null);
@@ -60,11 +63,14 @@ public class BackEBankingApplicationTests {
 	     User user1 = new User("XXX", "XX@gmail.com",false,Role_values.ROLE_CLIENT);
      Mockito.when(userRepository.findByName(user1.getNom())).thenReturn(user1);
 	 }
-	 
+
 	 @Test
 	 public void whenValidName_thenUserShouldBeFound() {
 	     String name = "khouloud";
+
 	     User found = userRepository.findByName(name); 
+  //userRepository.findByName(name); 
+
 	     assertEquals(found.getNom() , name); 
 	  }
 	 

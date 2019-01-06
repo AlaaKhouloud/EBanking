@@ -1,11 +1,14 @@
 package com.back.dao;
 
+
 import java.util.List;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
 
 import com.back.entities.Adresse;
 import com.back.entities.Agence;
@@ -46,4 +49,25 @@ public interface UserRepository  extends JpaRepository<User, Long>{
 	public Compte getidcomte(@Param("x1") Long id_user);
 	@Query("SELECT t FROM Virement t INNER JOIN Compte u on t.from_RIB.id_compte = u.id_compte where  t.from_RIB.id_compte = :x1")
 	public Virement getMontant(@Param("x1") Long id_compte);
+
+	public User findByEmail(String pseudo, String mot_de_passe);
+
+	
+	
+	
+	/*
+import com.back.entities.User; 
+
+@Repository
+public interface UserRepository  extends JpaRepository<User, Long>{
+	@Query("SELECT u FROM User u where email = :x1 and password = :x2")
+	public User findByEmail(@Param("x1") String email,@Param("x2")  String mot_de_passe);
+	
+	
+	@Query("SELECT u FROM User u where email = :x1")
+	public User findByUsername(@Param("x1")String email);
+	
+	*/
+	
+
 }

@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import org.springframework.web.cors.CorsConfiguration;
 import  org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -26,6 +29,11 @@ public class BackEBankingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BackEBankingApplication.class, args);
 
+
+
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		System.out.println(encoder.encode("khouloud"));
+
 	}
 	
 	public  void run(String...args) {
@@ -37,6 +45,7 @@ public class BackEBankingApplication {
 	    roles.forEach(r->System.out.println(r.getRole()));*/
     }
 	
+
 	@Bean
 	public CorsFilter corsfFilter() {
 		final UrlBasedCorsConfigurationSource source = new  UrlBasedCorsConfigurationSource();
@@ -53,4 +62,6 @@ public class BackEBankingApplication {
 		return new CorsFilter(source);
 
 	}
+
+
 }

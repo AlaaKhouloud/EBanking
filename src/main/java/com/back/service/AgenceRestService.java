@@ -1,5 +1,6 @@
 package com.back.service;
 
+
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -14,11 +15,18 @@ import com.back.dao.AgenceRepository;
 import com.back.entities.Agence;
 import com.back.metier.AgenceMetier;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.back.dao.AgenceRepository;
+
+
 @RestController
 public class AgenceRestService {
 
 	@Autowired
 	private AgenceRepository agenceRepository;
+
 	
 	public Agence getAgence(String name){
 		return agenceRepository.findByName(name);
@@ -42,5 +50,5 @@ public class AgenceRestService {
 	}
 	
 	
-    
+
 }

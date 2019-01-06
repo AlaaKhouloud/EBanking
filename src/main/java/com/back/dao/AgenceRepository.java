@@ -1,5 +1,6 @@
 package com.back.dao;
 
+
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -31,6 +32,5 @@ public interface AgenceRepository  extends JpaRepository<Agence, Long>{
 			                 @Param("adresse") String adresse,
 		                 @Param("date_creation") Date date_creation);
 */	
-	
 	
 }

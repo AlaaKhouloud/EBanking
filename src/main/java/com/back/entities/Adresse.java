@@ -1,6 +1,8 @@
 package com.back.entities;
 
+
 import java.io.Serializable;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,16 +11,26 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+
+import lombok.Data;
+
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 
 @Entity 
-public @Data class Adresse implements Serializable{
+public @Data class Adresse {
 
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+
 	private Long id_adresse;
 	private String adrs;
 	@ManyToOne
 	@JoinColumn(name = "id_user")
+
+	@JsonIgnore
+
 	private User user;
 	
 	public Adresse(String adrs, User user) {
