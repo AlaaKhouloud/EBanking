@@ -32,4 +32,16 @@ public class AgenceMetierImpl implements AgenceMetier{
 		return agenceRepository.getOne(id);
 	}
 
+	@Override
+	public Agence findByName(String name) {
+		// TODO Auto-generated method stub
+		return agenceRepository.findByName(name);
+	}
+
+	@Override
+	public List<Agence> findAllAgence(String banque) {
+		// TODO Auto-generated method stub
+		return agenceRepository.findAllAgence(banque);
+	}
+
 }

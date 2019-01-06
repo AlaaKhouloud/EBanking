@@ -25,14 +25,7 @@ public class BackEBankingApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(BackEBankingApplication.class, args);
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-		
-=======
-=======
->>>>>>> refs/remotes/origin/khouloud
-		 
+
 	}
 	
 	public  void run(String...args) {
@@ -58,9 +51,6 @@ public class BackEBankingApplication {
 		configuration.addAllowedMethod("DELETE"); 
 		source.registerCorsConfiguration("/**", configuration);
 		return new CorsFilter(source);
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/khouloud
-=======
->>>>>>> refs/remotes/origin/khouloud
+
 	}
 }

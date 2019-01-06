@@ -6,10 +6,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.back.entities.Adresse;
 import com.back.entities.Agence;
 import com.back.entities.Compte;
 import com.back.entities.Role_values;
+import com.back.entities.Telephone;
 import com.back.entities.User;
+import com.back.entities.Virement;
 import com.back.metier.*;
 
 @Component("myRmiService")
@@ -21,6 +24,8 @@ public class EBankingRmiRemoteImpl implements EBankingRmiRemote {
 	private AgenceMetier agenceMetier;
 	@Autowired
 	private CompteMetier compteMetier;
+	@Autowired
+	private AdresseMetier adresseMetier;
 	
 	
 	// gestion des utilisateurs
@@ -33,6 +38,18 @@ public class EBankingRmiRemoteImpl implements EBankingRmiRemote {
 	public User getUser(Long id) throws RemoteException {
 		// TODO Auto-generated method stub
 		return userMetier.getUser(id);
+	}
+	
+	@Override
+	public List<String> getUser2(Long id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return userMetier.getUser2(id);
+	}
+	
+	@Override
+	public User authUser(String email, String pass) throws RemoteException {
+		// TODO Auto-generated method stub
+		return userMetier.authUser(email, pass);
 	}
 
 	/*
@@ -86,7 +103,56 @@ public class EBankingRmiRemoteImpl implements EBankingRmiRemote {
 	}
 	
 	
+	@Override
+	public String getAdresse(Long id_user) {
+		// TODO Auto-generated method stub
+		return adresseMetier.getAdresse(id_user);
+	}
+
+	@Override
+	public List<User> findByIdUser2(Long id){
+		// TODO Auto-generated method stub
+		return userMetier.findByIdUser2(id);
+	}
 	
+	
+	
+	//Informations sur agence
+	@Override
+		public Agence AgenceInfos(Long id_agence){
+			return userMetier.AgenceInfos(id_agence);
+		
+	}
+	
+	//Informations de l'Adresse
+		@Override
+	public Adresse AdresseInfos(Long id_user){
+		return userMetier.AdresseInfos(id_user);
+		
+	}	
+	
+		//Informations telephone
+		@Override
+	public Telephone TelephoneInfos(Long id_user){
+			
+				return userMetier.TelephoneInfos(id_user);
+				
+			}
+		
+//gestion compte 
+		@Override
+		public Compte getidcomte(Long id_user)  {
+			// TODO Auto-generated method stub
+			return userMetier.getidcomte(id_user);
+		}
+		
+//gestion virement 	
+		@Override
+		public Virement getMontant(Long id_compte) throws RemoteException {
+			// TODO Auto-generated method stub
+			return userMetier.getMontant(id_compte);
+		}
+
 	
 	// gestion des Agences
 
@@ -120,6 +186,27 @@ public class EBankingRmiRemoteImpl implements EBankingRmiRemote {
 		// TODO Auto-generated method stub
 		return agenceMetier.listAgence();
 	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.back.rmi.EBankingRmiRemote#listAgence()
+	 */
+	@Override
+	public Agence findByName(String name){
+		// TODO Auto-generated method stub
+		return agenceMetier.findByName(name);
+	}
+	
+/**
+ * 
+ */
+	@Override
+	public List<Agence> findAllAgence(String banque) throws RemoteException {
+		// TODO Auto-generated method stub
+		return agenceMetier.findAllAgence(banque);
+	}
+
+
 	
 	
 	
@@ -164,5 +251,12 @@ public class EBankingRmiRemoteImpl implements EBankingRmiRemote {
 		// TODO Auto-generated method stub
 		compteMetier.SupprimerCompte(id);
 	}
+
+	
+
+
+	
+
+	
 
 }

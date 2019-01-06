@@ -68,10 +68,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-		
+	
 <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 <dependency>
     <groupId>org.projectlombok</groupId>
@@ -82,18 +79,13 @@
 
 
 
-=======
-=======
->>>>>>> refs/remotes/origin/khouloud
+
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-core</artifactId> 
 		</dependency>
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/khouloud
-=======
->>>>>>> refs/remotes/origin/khouloud
+
 		
 	</dependencies>
 
