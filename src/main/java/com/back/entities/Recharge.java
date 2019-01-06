@@ -12,13 +12,16 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 import lombok.Data;
 
 @Entity
 public @Data class Recharge implements Serializable{
+
 
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id_recharge;
@@ -48,5 +51,4 @@ public @Data class Recharge implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
  
-	
 }

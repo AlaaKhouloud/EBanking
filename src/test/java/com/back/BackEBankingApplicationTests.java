@@ -19,10 +19,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.back.dao.RoleRepository;
+ 
 import com.back.dao.UserRepository;
-import com.back.entities.Adresse;
-import com.back.entities.Role;
+import com.back.entities.Adresse; 
 import com.back.entities.Role_values;
 import com.back.entities.Telephone;
 import com.back.entities.User;

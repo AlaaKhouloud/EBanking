@@ -11,17 +11,23 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import javax.persistence.JoinColumn;
+
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 import lombok.Data;
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"email" , "CIN"}))
 public @Data class User implements Serializable{
+
 
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id_user; 
@@ -57,8 +63,6 @@ public @Data class User implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
 	public User(Long id_user, String email, String password, boolean enabled, Role_values role) {
 		super();
 		this.id_user = id_user;
@@ -84,6 +88,51 @@ public @Data class User implements Serializable{
 	}
 
 
+	public User( String email, String password, String nom) {
+		super(); 
+		this.email = email;
+		this.password = password;
+		this.nom = nom;
+	}
+
+	public User(String cIN, String email, String password, String nom, String prenom, String pays, String ville,
+			boolean enabled, List<Adresse> adresses, List<Telephone> telephones, Date date_naissance,
+			Date date_ouverture, Date date_adhesion) {
+		super();
+		CIN = cIN;
+		this.email = email;
+		this.password = password;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.pays = pays;
+		this.ville = ville;
+		this.enabled = enabled;
+		this.adresses = adresses;
+		this.telephones = telephones;
+		this.date_naissance = date_naissance;
+		this.date_ouverture = date_ouverture;
+		this.date_adhesion = date_adhesion;
+	}
+
+	public User(String cIN, String email, String password, String nom, String prenom, String pays, String ville,
+			boolean enabled, Date date_naissance,
+			Date date_ouverture, Date date_adhesion) {
+		super();
+		CIN = cIN;
+		this.email = email;
+		this.password = password;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.pays = pays;
+		this.ville = ville;
+		this.enabled = enabled;
+		this.date_naissance = date_naissance;
+		this.date_ouverture = date_ouverture;
+		this.date_adhesion = date_adhesion;
+	}
+
+
+
 	public User(String email, String password, String nom, String prenom) {
 		super();
 		this.email = email;
@@ -91,8 +140,6 @@ public @Data class User implements Serializable{
 		this.nom = nom;
 		this.prenom = prenom;
 	}
-	
-	
 
- 
+
 }
