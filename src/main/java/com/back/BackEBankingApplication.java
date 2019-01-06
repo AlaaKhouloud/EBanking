@@ -1,28 +1,17 @@
 package com.back;
-
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+ 
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.cors.CorsConfiguration;
-import  org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-
-import com.back.dao.*;
-import com.back.entities.*;
-import com.back.entities.Role_values; 
-
+import org.springframework.boot.autoconfigure.SpringBootApplication; 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; 
+ 
 @SpringBootApplication
-public class BackEBankingApplication {
+public class BackEBankingApplication implements CommandLineRunner{
 
-	@Autowired
-	private   RoleRepository rolerep ; 
-	@Autowired 
-	private   UserRepository userrep;
-	
+	private static final Logger Log = LoggerFactory.getLogger(BackEBankingApplication.class);
 	
 	public static void main(String[] args) {
 		SpringApplication.run(BackEBankingApplication.class, args);
@@ -30,13 +19,14 @@ public class BackEBankingApplication {
 		System.out.println(encoder.encode("khouloud"));
 	}
 	
+	@Value("${application.name}")
+	private String applicationName;
+	@Value("${usename}")
+	private String Username;
+	
 	public  void run(String...args) {
-		/*rolerep.save(new Role(Role_values.ROLE_CLIENT,"client role")); 
-		rolerep.flush();
-		userrep.save(new User("ffff","fefefe"));
-		userrep.flush();
-	    List<Role> roles = rolerep.findAll();
-	    roles.forEach(r->System.out.println(r.getRole()));*/
-    }
+		
+		Log.info("Application name : {} , Username : {}"  , applicationName , Username);
+	}
 	
 }
