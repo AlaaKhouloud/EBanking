@@ -53,8 +53,7 @@ public @Data class Compte implements Serializable{
 	 
     
 	public Compte() {
-		super();
-		// TODO Auto-generated constructor stub
+		super(); 
 	}
 
 

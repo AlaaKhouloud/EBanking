@@ -44,14 +44,18 @@ public class VirementRestService {
 	
 	
 	@PutMapping(value="/addVirement")
-	@PreAuthorize("hasRole('ROLE_CLIENT')")
+	//@PreAuthorize("hasRole('ROLE_CLIENT')")
 	public ResponseEntity<Virement> addVirement(@RequestParam("email")String pseudo , @RequestParam("from")String ribfrom, @RequestParam("to")String ribto , @RequestParam("montant")String montant){ 
 		List<Compte> compteIN = compteRepository.findAll(); 
 		Virement virement = null;
 		Compte lecompte = null;
+		Compte lecompteTo = null;
 		for(Compte c : compteIN) {
 			if(c.getUser_cpt().getEmail().equals(pseudo) && c.getRIB().equals(ribfrom)) {
 				lecompte = c;
+			}
+			if(c.getRIB().equals(ribto)) {
+				lecompteTo = c;
 			}
 		}
 		if(lecompte != null) {
@@ -59,12 +63,16 @@ public class VirementRestService {
 				virement = virRepository.save(new Virement(lecompte ,ribto , new Date() , Double.valueOf(montant) , Etat_virement.IN_VERIFICATION_PROCESS));
 				lecompte.setMoney(lecompte.getMoney() - Double.valueOf(montant));
 				lecompte.setMoney_for_transactions(lecompte.getMoney_for_transactions() + Double.valueOf(montant));
-			    compteRepository.saveAndFlush(lecompte);
+			    compteRepository.saveAndFlush(lecompte); 
 			}
 		}
 		
-        if(virement !=null)
-	    return new ResponseEntity<Virement>(virement , HttpStatus.OK);
+        if(virement !=null) {
+        	if(lecompteTo!=null) {
+        		lecompteTo.setMoney(lecompteTo.getMoney() + Double.valueOf(montant));
+        	}
+	        return new ResponseEntity<Virement>(virement , HttpStatus.OK);
+	    }
         else return new ResponseEntity<Virement>(virement , HttpStatus.NO_CONTENT);
 	}
 }
