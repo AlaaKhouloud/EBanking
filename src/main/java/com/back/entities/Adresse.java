@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Entity 
-public @Data class Adresse {
+public @Data class Adresse implements Serializable{
 
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id_adresse;

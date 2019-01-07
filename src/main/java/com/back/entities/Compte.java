@@ -85,5 +85,15 @@ public @Data class Compte implements Serializable{
 		this.recharges = recharges;
 		this.virements = virements;
 	}
+	
+	
+	public Compte(Long id_compte,User user_cpt, String rIB, Double money) {
+		super();
+		
+		RIB = rIB;
+		this.money = money;
+		this.id_compte = id_compte;
+		this.user_cpt = user_cpt;
+	}
 
 }

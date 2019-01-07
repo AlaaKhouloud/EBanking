@@ -20,6 +20,14 @@ public class UserMetierImpl implements UserMetier{
 	@Autowired
 	private UserRepository userRepository;
 	
+	public UserRepository getUserRepository() {
+		return userRepository;
+	}
+
+	public void setUserRepository(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+
 	@Override
 	public User getUser(Long id) {
 		// TODO Auto-generated method stub
