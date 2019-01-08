@@ -31,6 +31,8 @@ public @Data class User implements Serializable{
 
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id_user; 
+	@JoinColumn(name="id_agence")
+	private Long id_agence;
 	private String CIN; 
 	private String email; 
 	private String password; 
@@ -86,7 +88,13 @@ public @Data class User implements Serializable{
 		this.email = email;
 		this.password = password; 
 	}
-
+	
+	public User(long id_user, String email, String password) {
+		super(); 
+		this.id_user = id_user;
+		this.email = email;
+		this.password = password; 
+	}
 
 	public User( String email, String password, String nom) {
 		super(); 

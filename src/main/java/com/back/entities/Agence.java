@@ -46,6 +46,15 @@ public @Data class Agence implements Serializable{
 		this.date_creation = date_creation;
 		this.creator = creator;
 	}
+	
+	public Agence(Long id_agence, String nom, String pays, String ville) {
+		super(); 
+		this.id_agence = id_agence;
+		this.nom = nom;
+		this.pays = pays;
+		this.ville = ville;
+		
+	}
 
 	public Agence() {
 		super();

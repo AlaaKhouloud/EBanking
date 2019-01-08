@@ -54,5 +54,14 @@ public @Data class Virement implements Serializable{
 		this.montant = montant;
 		this.etat_virement = etat_virement;
 	}
+	
+	public Virement(Compte from, String to_RIB, Double montant) {
+		super(); 
+		this.from_RIB = from;
+		this.to_RIB = to_RIB;
+		
+		this.montant = montant;
+		
+	}
 
 }

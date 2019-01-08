@@ -32,5 +32,7 @@ public interface AgenceRepository  extends JpaRepository<Agence, Long>{
 			                 @Param("adresse") String adresse,
 		                 @Param("date_creation") Date date_creation);
 */	
-	
+		
+	public Agence getAgence(Long id);
+	public Agence creerAgence(Agence a);
 }
