@@ -41,6 +41,7 @@ public class TestRestApis {
 				);
 				/*.andExpect(jsonPath("$.nom", Matchers.isNotNull()))
 				.andExpect(jsonPath("$.rib", Matchers.contains("RIBAAA")));*/
+		// this.mockMvc.perform(MockMvcRequestBuilders.post("/me").param("email","test@gmail.test"));
 	}
 
 }

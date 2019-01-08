@@ -54,7 +54,7 @@ public class VirementRestService {
 			if(c.getUser_cpt().getEmail().equals(pseudo) && c.getRIB().equals(ribfrom)) {
 				lecompte = c;
 			}
-			if(c.getRIB().equals(ribto)) {
+			else if(c.getRIB().equals(ribto)) {
 				lecompteTo = c;
 			}
 		}
@@ -70,6 +70,7 @@ public class VirementRestService {
         if(virement !=null) {
         	if(lecompteTo!=null) {
         		lecompteTo.setMoney(lecompteTo.getMoney() + Double.valueOf(montant));
+        		compteRepository.saveAndFlush(lecompteTo); 
         	}
 	        return new ResponseEntity<Virement>(virement , HttpStatus.OK);
 	    }
