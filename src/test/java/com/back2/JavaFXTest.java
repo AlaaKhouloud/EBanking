@@ -70,7 +70,7 @@ public class JavaFXTest {
 
 	// UserRepository ur;
 	
-	/* @org.junit.Before
+	 @org.junit.Before
 	 public void setUp() {  
 		
 		 
@@ -78,7 +78,7 @@ public class JavaFXTest {
 		ur = mock(UserRepository.class);
 		 when(ur.findByName(u.getNom())).thenReturn(u);
 	   
-	 }*/
+	 }
 	 
 	 @Before
 	 public void init(){
@@ -143,7 +143,7 @@ public class JavaFXTest {
 		 */
 	 }
 	 
-	 @Test
+	@Test
 	 public void testdeleteUser()throws Exception{
 		 
 		doNothing().when(ur).deleteUser((long) 23);
@@ -228,7 +228,7 @@ public class JavaFXTest {
 	 @Test
 	 public void testgetidcompte()throws Exception{
 		 User user_cpt = new User(1, "khaoula@gmail.com", "5787");
-		 Compte cmp = new Compte((long)1,user_cpt, "72836327", (double) 30000);
+		 Compte cmp = new Compte(user_cpt, "72836327", (double) 30000);
 		 when(ur.getidcomte(cmp.getUser_cpt().getId_user())).thenReturn(cmp);
 		 System.out.println("*****************************************" + ur.getidcomte(cmp.getUser_cpt().getId_user()));
 		 
@@ -244,7 +244,7 @@ public class JavaFXTest {
 	@Test 
 	public void testgetMontant()throws Exception{
 		User user_cpt = new User(1, "khaoula@gmail.com", "5787");
-		Compte cpt = new Compte((long)1, user_cpt, "627627672372", (double) 20000);
+		Compte cpt = new Compte( user_cpt, "627627672372", (double) 20000);
 		
 		Virement vr = new Virement(cpt, "123456", (double) 500);
 		

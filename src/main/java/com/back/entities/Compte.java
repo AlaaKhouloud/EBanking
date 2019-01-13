@@ -87,13 +87,13 @@ public @Data class Compte implements Serializable{
 	}
 	
 	
-	public Compte(Long id_compte,User user_cpt, String rIB, Double money) {
+	public Compte(User user_cpt, String rIB, Double money) {
 		super();
 		
 		RIB = rIB;
-		this.money = money;
-		this.id_compte = id_compte;
+		this.money = money; 
 		this.user_cpt = user_cpt;
 	}
+
 
 }
