@@ -1,0 +1,20 @@
+<suite name="UserFunctionalTest" parallel="none">
+  <test name="IE_Browser">
+     <parameter name="browser" value="iexplore"/>
+     <classes>
+       <class name="com.back.Functionaltests.WebDriverTest"/>
+     </classes>
+  </test>
+  <test name="FF_Browser">
+     <parameter name="browser" value="firefox"/>
+     <classes>
+       <class name="com.back.Functionaltests.WebDriverTest"/>
+     </classes>
+  </test>
+  <test name="Chrome_Browser">
+     <parameter name="browser" value="chrome"/>
+     <classes>
+       <class name="com.back.Functionaltests.WebDriverTest"/>
+     </classes>
+  </test>
+</suite>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-UserFunctionalTest">
+              <span class="suite-name border-skipped">UserFunctionalTest</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-UserFunctionalTest">
+                    <span>E:\BackEBanking\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-UserFunctionalTest">
+                    <span class="test-stats">3 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-UserFunctionalTest">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-UserFunctionalTest">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-UserFunctionalTest">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-UserFunctionalTest">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-UserFunctionalTest">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">3 methods,  1 skipped,  2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-UserFunctionalTest" class="hide-methods skipped suite-UserFunctionalTest"> (hide)</a> <!-- hide-methods skipped suite-UserFunctionalTest -->
+                      <a href="#" panel-name="suite-UserFunctionalTest" class="show-methods skipped suite-UserFunctionalTest"> (show)</a> <!-- show-methods skipped suite-UserFunctionalTest -->
+                    </span>
+                    <div class="method-list-content skipped suite-UserFunctionalTest">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-UserFunctionalTest" title="com.back.Functionaltests.WebDriverTest" hash-for-method="seliniumElements">seliniumElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-UserFunctionalTest -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-UserFunctionalTest" class="hide-methods passed suite-UserFunctionalTest"> (hide)</a> <!-- hide-methods passed suite-UserFunctionalTest -->
+                      <a href="#" panel-name="suite-UserFunctionalTest" class="show-methods passed suite-UserFunctionalTest"> (show)</a> <!-- show-methods passed suite-UserFunctionalTest -->
+                    </span>
+                    <div class="method-list-content passed suite-UserFunctionalTest">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-UserFunctionalTest" title="com.back.Functionaltests.WebDriverTest" hash-for-method="seliniumElements">seliniumElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-UserFunctionalTest" title="com.back.Functionaltests.WebDriverTest" hash-for-method="seliniumElements">seliniumElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-UserFunctionalTest -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-UserFunctionalTest" class="panel UserFunctionalTest">
+          <div class="suite-UserFunctionalTest-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.back.Functionaltests.WebDriverTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="seliniumElements">
+                  </a> <!-- seliniumElements -->
+                  <span class="method-name">seliniumElements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-UserFunctionalTest-class-skipped -->
+          <div class="suite-UserFunctionalTest-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.back.Functionaltests.WebDriverTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="seliniumElements">
+                  </a> <!-- seliniumElements -->
+                  <span class="method-name">seliniumElements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="seliniumElements">
+                  </a> <!-- seliniumElements -->
+                  <span class="method-name">seliniumElements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-UserFunctionalTest-class-passed -->
+        </div> <!-- panel UserFunctionalTest -->
+        <div panel-name="test-xml-UserFunctionalTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">E:\BackEBanking\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;UserFunctionalTest&quot; parallel=&quot;none&quot;&gt;
+  &lt;test name=&quot;IE_Browser&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;iexplore&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.back.Functionaltests.WebDriverTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- IE_Browser --&gt;
+  &lt;test name=&quot;FF_Browser&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.back.Functionaltests.WebDriverTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FF_Browser --&gt;
+  &lt;test name=&quot;Chrome_Browser&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.back.Functionaltests.WebDriverTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Chrome_Browser --&gt;
+&lt;/suite&gt; &lt;!-- UserFunctionalTest --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-UserFunctionalTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for UserFunctionalTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">IE_Browser (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FF_Browser (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Chrome_Browser (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-UserFunctionalTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for UserFunctionalTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-UserFunctionalTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for UserFunctionalTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_UserFunctionalTest');
+function tableData_UserFunctionalTest() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(3);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'seliniumElements')
+data.setCell(0, 2, 'com.back.Functionaltests.WebDriverTest')
+data.setCell(0, 3, 28823);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'seliniumElements')
+data.setCell(1, 2, 'com.back.Functionaltests.WebDriverTest')
+data.setCell(1, 3, 21824);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'seliniumElements')
+data.setCell(2, 2, 'com.back.Functionaltests.WebDriverTest')
+data.setCell(2, 3, 5);
+window.suiteTableData['UserFunctionalTest']= { tableData: data, tableDiv: 'times-div-UserFunctionalTest'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <div id="times-div-UserFunctionalTest">
+              </div> <!-- times-div-UserFunctionalTest -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-UserFunctionalTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for UserFunctionalTest</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-UserFunctionalTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-UserFunctionalTest" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.back.Functionaltests.WebDriverTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">openBrowser(iexplore)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">seliniumElements</span>
+                <span class="method-start">15696 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test before">
+                <span class="method-name">openBrowser(firefox)</span>
+                <span class="method-start">15836 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">seliniumElements</span>
+                <span class="method-start">50147 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test before">
+                <span class="method-name">openBrowser(chrome)</span>
+                <span class="method-start">79012 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">seliniumElements</span>
+                <span class="method-start">101586 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

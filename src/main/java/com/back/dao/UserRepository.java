@@ -56,7 +56,7 @@ public interface UserRepository  extends JpaRepository<User, Long>{
 	@Query("SELECT t FROM Virement t INNER JOIN Compte u on t.from_RIB.id_compte = u.id_compte where  t.from_RIB.id_compte = :x1")
 	public Virement getMontant(@Param("x1") Long id_compte);
 	
-	@Query
+/*	@Query
 	public User addUser(User u);
 	@Query
 	public void deleteUser(Long id);
@@ -64,6 +64,6 @@ public interface UserRepository  extends JpaRepository<User, Long>{
 	public List<User> listUser();
 	@Query
 	public User modifUser(User u);
-
+*/
  
 }
