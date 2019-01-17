@@ -33,18 +33,20 @@ public class FunctionalTest {
 	public ExtentReports reports;
 	public ExtentTest test;
 	
+	
+	
 	@org.testng.annotations.Parameters({"browser"})
 	@BeforeTest
 	public void openBrowser(String browser) {
 		reports = new ExtentReports("E:\\BackEBanking\\reports\\report.html");
-		if(browser.equalsIgnoreCase("iexplore")) {
+		/*if(browser.equalsIgnoreCase("iexplore")) {
 			System.out.println("----InternetExplorer test started----"); 
 			File file = new File("E:\\BackEBanking\\IEDriverServer32.exe");
 			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 		     
 		    WebDriver driver = new InternetExplorerDriver();
 			System.out.println("Internet Explorer browser is open");
-		}
+		}*/
 		if(browser.equalsIgnoreCase("firefox")) {
 			System.out.println("----Firefox test started----");
 			File file = new File("E:\\BackEBanking\\geckodriver.exe");

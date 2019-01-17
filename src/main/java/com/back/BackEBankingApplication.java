@@ -24,7 +24,7 @@ public class BackEBankingApplication implements CommandLineRunner{
 	@Value("${usename}")
 	private String Username;
 	
-	public  void run(String...args) {
+	public void run(String...args) {
 		
 		Log.info("Application name : {} , Username : {}"  , applicationName , Username);
 	}
