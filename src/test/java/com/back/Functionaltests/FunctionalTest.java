@@ -32,7 +32,7 @@ public class FunctionalTest {
 	String baseurl = "http://localhost:4200/";
 	public ExtentReports reports;
 	public ExtentTest test;
-	
+	public UserRepository userrepo;
 	
 	
 	@org.testng.annotations.Parameters({"browser"})
@@ -84,10 +84,11 @@ public class FunctionalTest {
 		
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id='signin']")).click();
-		test.log(LogStatus.WARNING , "click search");
-		System.out.println("search click");
+		test.log(LogStatus.WARNING , "click login");
+		System.out.println("login click");
 		Thread.sleep(3000);
 		
+
 		reports.endTest(test);
 		reports.flush();
 		

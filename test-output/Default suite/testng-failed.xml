@@ -3,11 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.back.Functionaltests.UserFunctionalTest">
+      <class name="com.back.Functionaltests.WebDriverTest">
         <methods>
           <include name="seliniumElements"/>
         </methods>
-      </class> <!-- com.back.Functionaltests.UserFunctionalTest -->
+      </class> <!-- com.back.Functionaltests.WebDriverTest -->
+      <class name="com.back.Functionaltests.FunctionalTest">
+        <methods>
+          <include name="seliniumElements"/>
+        </methods>
+      </class> <!-- com.back.Functionaltests.FunctionalTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

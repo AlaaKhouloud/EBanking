@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>IE_Browser</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/6</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 15 01:18:40 CET 2019</td>
+<td>Started on:</td><td>Fri Jan 18 13:39:03 CET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>15 seconds (15713 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (497 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,65 +76,11 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.back.Functionaltests.WebDriverTest.openBrowser()'><b>openBrowser</b><br>Test class: com.back.Functionaltests.WebDriverTest<br>Parameters: iexplore</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 105%. It should be set to 100%
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;DESKTOP-FFB7557&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
-Driver info: driver.version: InternetExplorerDriver
-remote stacktrace: 
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
-	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:221)
-	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
-	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
-	at com.back.Functionaltests.FunctionalTest.openBrowser(FunctionalTest.java:45)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace443721024", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace443721024'><pre>org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 105%. It should be set to 100%
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;DESKTOP-FFB7557&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
-Driver info: driver.version: InternetExplorerDriver
-remote stacktrace: 
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
-	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:221)
-	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
-	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
-	at com.back.Functionaltests.FunctionalTest.openBrowser(FunctionalTest.java:45)
+<td><div><pre>java.lang.NullPointerException
+	at com.back.Functionaltests.FunctionalTest.openBrowser(FunctionalTest.java:65)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace22671767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace22671767'><pre>java.lang.NullPointerException
+	at com.back.Functionaltests.FunctionalTest.openBrowser(FunctionalTest.java:65)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -168,6 +114,31 @@ remote stacktrace:
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
+<tr>
+<td title='com.back.Functionaltests.WebDriverTest.AddRecharge()'><b>AddRecharge</b><br>Test class: com.back.Functionaltests.WebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.back.Functionaltests.WebDriverTest@2758fe70</td></tr>
+<tr>
+<td title='com.back.Functionaltests.WebDriverTest.AddVirement()'><b>AddVirement</b><br>Test class: com.back.Functionaltests.WebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.back.Functionaltests.WebDriverTest@2758fe70</td></tr>
+<tr>
+<td title='com.back.Functionaltests.WebDriverTest.déconnexion()'><b>déconnexion</b><br>Test class: com.back.Functionaltests.WebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.back.Functionaltests.WebDriverTest@2758fe70</td></tr>
+<tr>
+<td title='com.back.Functionaltests.WebDriverTest.seeRecharge()'><b>seeRecharge</b><br>Test class: com.back.Functionaltests.WebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.back.Functionaltests.WebDriverTest@2758fe70</td></tr>
+<tr>
+<td title='com.back.Functionaltests.WebDriverTest.seeVirement()'><b>seeVirement</b><br>Test class: com.back.Functionaltests.WebDriverTest</td>
+<td></td>
+<td>0</td>
+<td>com.back.Functionaltests.WebDriverTest@2758fe70</td></tr>
 <tr>
 <td title='com.back.Functionaltests.WebDriverTest.seliniumElements()'><b>seliniumElements</b><br>Test class: com.back.Functionaltests.WebDriverTest</td>
 <td></td>

@@ -7,10 +7,15 @@
     <classes>
       <class name="com.back.Functionaltests.WebDriverTest">
         <methods>
+          <include name="seeRecharge"/>
+          <include name="AddVirement"/>
           <include name="seliniumElements"/>
+          <include name="seeVirement"/>
           <include name="openBrowser"/>
           <include name="openBrowser"/>
           <include name="openBrowser"/>
+          <include name="AddRecharge"/>
+          <include name="déconnexion"/>
         </methods>
       </class> <!-- com.back.Functionaltests.WebDriverTest -->
     </classes>

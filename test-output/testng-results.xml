@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="3" passed="2">
+<testng-results skipped="6" failed="0" total="18" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="UserFunctionalTest" duration-ms="123422" started-at="2019-01-15T00:18:40Z" finished-at="2019-01-15T00:20:43Z">
+  <suite name="UserFunctionalTest" duration-ms="105171" started-at="2019-01-18T12:39:03Z" finished-at="2019-01-18T12:40:48Z">
     <groups>
     </groups>
-    <test name="IE_Browser" duration-ms="15713" started-at="2019-01-15T00:18:40Z" finished-at="2019-01-15T00:18:56Z">
+    <test name="IE_Browser" duration-ms="497" started-at="2019-01-18T12:39:03Z" finished-at="2019-01-18T12:39:03Z">
       <class name="com.back.Functionaltests.WebDriverTest">
-        <test-method status="FAIL" signature="openBrowser(java.lang.String)[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="openBrowser" is-config="true" duration-ms="0" started-at="2019-01-15T01:18:40Z" finished-at="2019-01-15T01:18:40Z">
+        <test-method status="FAIL" signature="openBrowser(java.lang.String)[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="openBrowser" is-config="true" duration-ms="0" started-at="2019-01-18T13:39:03Z" finished-at="2019-01-18T13:39:03Z">
           <params>
             <param index="0">
               <value>
@@ -15,46 +15,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Unexpected error launching Internet Explorer. Browser zoom level was set to 105%. It should be set to 100%
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-FFB7557', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: driver.version: InternetExplorerDriver
-remote stacktrace: ]]>
-            </message>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unexpected error launching Internet Explorer. Browser zoom level was set to 105%. It should be set to 100%
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-FFB7557', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: driver.version: InternetExplorerDriver
-remote stacktrace: 
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
-	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:221)
-	at org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:213)
-	at org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:150)
-	at com.back.Functionaltests.FunctionalTest.openBrowser(FunctionalTest.java:45)
+              <![CDATA[java.lang.NullPointerException
+	at com.back.Functionaltests.FunctionalTest.openBrowser(FunctionalTest.java:65)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -79,19 +43,39 @@ remote stacktrace:
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="SKIP" signature="seliniumElements()[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="seliniumElements" duration-ms="5" started-at="2019-01-15T01:18:56Z" finished-at="2019-01-15T01:18:56Z">
+        <test-method status="SKIP" signature="seliniumElements()[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="seliniumElements" duration-ms="2" started-at="2019-01-18T13:39:03Z" finished-at="2019-01-18T13:39:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seliniumElements -->
+        <test-method status="SKIP" signature="seeVirement()[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="seeVirement" duration-ms="2" started-at="2019-01-18T13:39:03Z" finished-at="2019-01-18T13:39:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeVirement -->
+        <test-method status="SKIP" signature="AddVirement()[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="AddVirement" duration-ms="3" started-at="2019-01-18T13:39:03Z" finished-at="2019-01-18T13:39:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVirement -->
+        <test-method status="SKIP" signature="seeRecharge()[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="seeRecharge" duration-ms="5" started-at="2019-01-18T13:39:03Z" finished-at="2019-01-18T13:39:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeRecharge -->
+        <test-method status="SKIP" signature="AddRecharge()[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="AddRecharge" duration-ms="3" started-at="2019-01-18T13:39:03Z" finished-at="2019-01-18T13:39:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddRecharge -->
+        <test-method status="SKIP" signature="déconnexion()[pri:0, instance:com.back.Functionaltests.WebDriverTest@2758fe70]" name="déconnexion" duration-ms="3" started-at="2019-01-18T13:39:03Z" finished-at="2019-01-18T13:39:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- déconnexion -->
       </class> <!-- com.back.Functionaltests.WebDriverTest -->
     </test> <!-- IE_Browser -->
-    <test name="FF_Browser" duration-ms="63143" started-at="2019-01-15T00:18:56Z" finished-at="2019-01-15T00:19:59Z">
+    <test name="FF_Browser" duration-ms="57565" started-at="2019-01-18T12:39:03Z" finished-at="2019-01-18T12:40:01Z">
       <class name="com.back.Functionaltests.WebDriverTest">
-        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="openBrowser" is-config="true" duration-ms="34311" started-at="2019-01-15T01:18:56Z" finished-at="2019-01-15T01:19:30Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="openBrowser" is-config="true" duration-ms="10027" started-at="2019-01-18T13:39:03Z" finished-at="2019-01-18T13:39:13Z">
           <params>
             <param index="0">
               <value>
@@ -102,15 +86,35 @@ remote stacktrace:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="seliniumElements()[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="seliniumElements" duration-ms="28823" started-at="2019-01-15T01:19:30Z" finished-at="2019-01-15T01:19:59Z">
+        <test-method status="PASS" signature="seliniumElements()[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="seliniumElements" duration-ms="13958" started-at="2019-01-18T13:39:13Z" finished-at="2019-01-18T13:39:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seliniumElements -->
+        <test-method status="PASS" signature="seeVirement()[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="seeVirement" duration-ms="3336" started-at="2019-01-18T13:39:27Z" finished-at="2019-01-18T13:39:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeVirement -->
+        <test-method status="PASS" signature="AddVirement()[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="AddVirement" duration-ms="10211" started-at="2019-01-18T13:39:31Z" finished-at="2019-01-18T13:39:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVirement -->
+        <test-method status="PASS" signature="seeRecharge()[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="seeRecharge" duration-ms="3320" started-at="2019-01-18T13:39:41Z" finished-at="2019-01-18T13:39:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeRecharge -->
+        <test-method status="PASS" signature="AddRecharge()[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="AddRecharge" duration-ms="10408" started-at="2019-01-18T13:39:44Z" finished-at="2019-01-18T13:39:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddRecharge -->
+        <test-method status="PASS" signature="déconnexion()[pri:0, instance:com.back.Functionaltests.WebDriverTest@71bbf57e]" name="déconnexion" duration-ms="6278" started-at="2019-01-18T13:39:55Z" finished-at="2019-01-18T13:40:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- déconnexion -->
       </class> <!-- com.back.Functionaltests.WebDriverTest -->
     </test> <!-- FF_Browser -->
-    <test name="Chrome_Browser" duration-ms="44406" started-at="2019-01-15T00:19:59Z" finished-at="2019-01-15T00:20:43Z">
+    <test name="Chrome_Browser" duration-ms="47069" started-at="2019-01-18T12:40:01Z" finished-at="2019-01-18T12:40:48Z">
       <class name="com.back.Functionaltests.WebDriverTest">
-        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="openBrowser" is-config="true" duration-ms="22574" started-at="2019-01-15T01:19:59Z" finished-at="2019-01-15T01:20:22Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="openBrowser" is-config="true" duration-ms="3759" started-at="2019-01-18T13:40:01Z" finished-at="2019-01-18T13:40:05Z">
           <params>
             <param index="0">
               <value>
@@ -121,10 +125,30 @@ remote stacktrace:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="seliniumElements()[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="seliniumElements" duration-ms="21824" started-at="2019-01-15T01:20:22Z" finished-at="2019-01-15T01:20:43Z">
+        <test-method status="PASS" signature="seliniumElements()[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="seliniumElements" duration-ms="11151" started-at="2019-01-18T13:40:05Z" finished-at="2019-01-18T13:40:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seliniumElements -->
+        <test-method status="PASS" signature="seeVirement()[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="seeVirement" duration-ms="3128" started-at="2019-01-18T13:40:16Z" finished-at="2019-01-18T13:40:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeVirement -->
+        <test-method status="PASS" signature="AddVirement()[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="AddVirement" duration-ms="9900" started-at="2019-01-18T13:40:19Z" finished-at="2019-01-18T13:40:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVirement -->
+        <test-method status="PASS" signature="seeRecharge()[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="seeRecharge" duration-ms="3145" started-at="2019-01-18T13:40:29Z" finished-at="2019-01-18T13:40:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeRecharge -->
+        <test-method status="PASS" signature="AddRecharge()[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="AddRecharge" duration-ms="9816" started-at="2019-01-18T13:40:32Z" finished-at="2019-01-18T13:40:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddRecharge -->
+        <test-method status="PASS" signature="déconnexion()[pri:0, instance:com.back.Functionaltests.WebDriverTest@64729b1e]" name="déconnexion" duration-ms="6156" started-at="2019-01-18T13:40:42Z" finished-at="2019-01-18T13:40:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- déconnexion -->
       </class> <!-- com.back.Functionaltests.WebDriverTest -->
     </test> <!-- Chrome_Browser -->
   </suite> <!-- UserFunctionalTest -->

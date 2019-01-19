@@ -24,6 +24,11 @@ public interface AgenceRepository  extends JpaRepository<Agence, Long>{
 	@Query("SELECT ag FROM Agence ag where banque = :x1")
 	public List<Agence> findAllAgence(@Param("x1") String banque);
 	
+	@Query("SELECT ag.nom FROM Agence ag")
+	public List<String> findAllAgenceNames();
+	
+	@Query("SELECT ag.id_agence FROM Agence ag where nom = :x1")
+	public Long findagenceidByName(@Param("x1") String name);
      
 	//@Query("INSERT INTO agence (nom, pays, ville, adresse, date_creation) VALUES (:nom, :pays, :ville, :adresse, :date_creation);")
 	/*public Agence addAgence (@Param("nom") String nom,
@@ -32,8 +37,5 @@ public interface AgenceRepository  extends JpaRepository<Agence, Long>{
 			                 @Param("adresse") String adresse,
 		                 @Param("date_creation") Date date_creation);
 */	
-	/*@Query
-	public Agence getAgence(Long id);
-	@Query
-	public Agence creerAgence(Agence a);*/
+ 
 }
