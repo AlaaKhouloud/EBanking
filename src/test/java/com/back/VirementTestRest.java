@@ -37,8 +37,7 @@ import com.back.metier.*;
 import com.back.service.*;
 import junit.framework.Assert;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ActiveProfiles( profiles={"test"})
+@RunWith(SpringJUnit4ClassRunner.class) 
 
 public class VirementTestRest {
 

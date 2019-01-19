@@ -43,8 +43,7 @@ import com.back.service.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ActiveProfiles( profiles={"test"})
+@RunWith(SpringJUnit4ClassRunner.class) 
 public class TestRestApis {
 
 	

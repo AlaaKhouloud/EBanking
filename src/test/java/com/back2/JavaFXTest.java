@@ -20,7 +20,10 @@ import java.util.List;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.back.dao.AgenceRepository;
 import com.back.dao.CompteRepository;
@@ -40,14 +43,13 @@ import net.bytebuddy.implementation.bytecode.assign.Assigner.EqualTypesOnly;
 
  
 
-@RunWith(SpringRunner.class)
-@ActiveProfiles( profiles={"test"})
+@RunWith(SpringJUnit4ClassRunner.class) 
 public class JavaFXTest {
 	
-	@InjectMocks
+	/*@Mock
 	private UserMetierImpl um ;
 	
-	@InjectMocks
+	@Mock
 	private AgenceMetierImpl am ;
 	
 	@Mock
@@ -66,27 +68,25 @@ public class JavaFXTest {
 	 private User user;
 
 	 @Mock
-	 private Agence agences;
+	 private Agence agences;*/
 
 	// UserRepository ur;
 	
-	 @org.junit.Before
-	 public void setUp() {  
-		
-		 
-		User u = new User("khaoula@gmail.com", "1234", "SENANE");
-		ur = mock(UserRepository.class);
-		 when(ur.findByName(u.getNom())).thenReturn(u);
-	   
-	 }
+	
+	 private MockMvc mockMvc;
+	 
+	 @InjectMocks
+	 private UserMetierImpl um;
+	 
+	 @Mock
+	 public UserRepository ur;
+	 
+	 @Mock
+	 public AgenceRepository ar;
 	 
 	 @Before
-	 public void init(){
-		MockitoAnnotations.initMocks(this);
-     	um = new UserMetierImpl();
-        um.setUserRepository(ur);
-        
-      
+	 public void setUp(){
+		mockMvc = MockMvcBuilders.standaloneSetup(um).build();		
 	 }
 	 
 	 @Test
@@ -123,57 +123,36 @@ public class JavaFXTest {
 	 
 	 @Test
 	 public void testaddUser()throws Exception{
-		/*  user = new User("khaoulasenane@gmail.com", "12345", "SENANE");
-		 // user = new User();
-		  
-		 when(ur.addUser(user)).thenReturn(user);
-		 
-		 User savedUser = ur.addUser(user);
-		 System.out.println("*************************" + user.getNom());
-		 System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$" + savedUser.getNom());
-		 assertThat(savedUser, is(equalTo(user)));
-	 
-		/* 
-		 User u = new User("khaoulasenane@gmail.com", "passd", "senane", "khaoula");
-		
- 
-		 um.addUser(u);
-		 
-		 verify(ur, times(1)).addUser(u);
-		 */
+
+		  User user = new User("khaoulasenane@gmail.com", "12345", "SENANE");
+
 	 }
 	 
 	@Test
 	 public void testdeleteUser()throws Exception{
 		 
-		/*doNothing().when(ur).deleteUser((long) 23);
-		//UserRepository my = Mockito.mock(UserRepository.class);
-		ur.deleteUser((long) 23);
+
+		doNothing().when(ur).deleteById((long) 23);
+
 		
-		verify(ur, times(1)).deleteUser((long) 23);*/
-		 
 	 }
 	
 	 @Test
 	 public void testListUser()throws Exception{
 		 
-		 List<User> users = ur.findAll();
+		 List<User> users = um.getUserRepository().findAll();
 		 assertThat(users.size(), is(greaterThanOrEqualTo(0)));
 		 
 	 }
 	 
 	 @Test
 	 public void testmodifUser()throws Exception{
-		  user = new User("khaoulasenane@gmail.com", "12345", "SENANEEEEEEEE");
+		 User user = new User("khaoulasenane@gmail.com", "12345", "SENANEEEEEEEE");
 		 // user = new User();
 		  
-		/* when(ur.modifUser(user)).thenReturn(user);
-		 
-		 User modifiedUser = ur.modifUser(user);
-		 System.out.println("*************************" + user.getNom());
-		
-		 assertThat(modifiedUser, is(equalTo(user)));*/
-	 
+
+		 when(um.modifUser(user)).thenReturn(user);
+ 
 	 }
 	 
 	 
@@ -181,7 +160,7 @@ public class JavaFXTest {
 	 
 	 @Test
 	 public void testgetAgence()throws Exception{
-		 agences = new Agence((long) 1,"Agence1", "Maroc", "Safi");
+		Agence agences = new Agence((long) 1,"Agence1", "Maroc", "Safi");
 		
 		//when(ar.getOne(agences.getId_agence())).thenReturn(agences);
 		 
@@ -207,14 +186,16 @@ public class JavaFXTest {
 	 
 	 @Test
 	 public void testcreerAgence()throws Exception{
-		  agences = new Agence((long) 1,"Agence", "Maroc", "Safi");
+		Agence  agences = new Agence((long) 1,"Agence", "Maroc", "Safi");
 		
-		/* when(ar.creerAgence(agences)).thenReturn(agences);
-		 
-		 Agence savedAgence = ar.creerAgence(agences);
-		 
-		 assertThat(savedAgence, is(equalTo(agences)));*/
-			
+		// when(ar.creerAgence(agences)).thenReturn(agences);
+		  when(ar.save(agences)).thenReturn(agences);
+		  
+		// Agence savedAgence = ar.creerAgence(agences);
+		  Agence savedAgence = ar.save(agences);
+		  
+		 assertThat(savedAgence, is(equalTo(agences)));
+		
 	 }
 	 
 	 @Test

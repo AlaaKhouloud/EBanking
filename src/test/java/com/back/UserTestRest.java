@@ -25,8 +25,7 @@ import com.back.service.UserRestService;
 
 import junit.framework.Assert;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ActiveProfiles( profiles={"test"})
+@RunWith(SpringJUnit4ClassRunner.class) 
 public class UserTestRest {
 
 	private MockMvc mockMvc;
