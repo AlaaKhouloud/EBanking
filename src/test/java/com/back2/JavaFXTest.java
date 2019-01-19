@@ -229,7 +229,7 @@ public class JavaFXTest {
 		
 		Virement vr = new Virement(cpt, "123456", (double) 500);
 		
-		when(ur.getMontant(cpt.getId_compte())).thenReturn(vr);
+		when(um.getMontant(cpt.getId_compte())).thenReturn(vr);
 		
 		double mnt = 19500;
 		int id = 1;

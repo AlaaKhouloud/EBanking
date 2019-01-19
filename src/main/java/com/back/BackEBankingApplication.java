@@ -21,15 +21,9 @@ public class BackEBankingApplication implements CommandLineRunner{
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		System.out.println(encoder.encode("khouloud"));
 	}
-	
-	@Value("${application.name}")
-	private String applicationName;
-	@Value("${usename}")
-	private String Username;
-	
+	 
 	public void run(String...args) {
-		
-		Log.info("Application name : {} , Username : {}"  , applicationName , Username);
+		 
 	}
 	
 }
