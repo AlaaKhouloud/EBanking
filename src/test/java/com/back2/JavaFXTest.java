@@ -222,7 +222,7 @@ public class JavaFXTest {
 	 }
 	 
 	 
-	@Test 
+	/*@Test 
 	public void testgetMontant()throws Exception{
 		User user_cpt = new User(1, "khaoula@gmail.com", "5787");
 		Compte cpt = new Compte( user_cpt, "627627672372", (double) 20000);
@@ -237,5 +237,5 @@ public class JavaFXTest {
 	//double mnt1=(double)cpt.getMoney() - (double) vr2.getMontant();
 		assertEquals(vr2.getFrom_RIB().getMoney(),cpt.getMoney());
 		
-	}
+	}*/
 }
